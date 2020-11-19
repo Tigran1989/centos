@@ -45,6 +45,7 @@ nmcli con edit
 -----------------------------Network LISTEN---------------------
 
 ss -tulpn | grep mysqld
+!ss # last command
 
 
 

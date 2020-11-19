@@ -1,0 +1,86 @@
+-----------------------------Network configuration file---------------------
+Network configuration file
+
+cd /etc/sysconfig/network-scripts/ for my case it is ifcfg-eno16780032
+
+HWADDR=00:50:56:AA:C9:98
+TYPE=Ethernet
+BOOTPROTO=dhcp
+DEFROUTE=yes
+PEERDNS=yes
+PEERROUTES=yes
+IPV4_FAILURE_FATAL=no
+IPV6INIT=yes
+IPV6_AUTOCONF=yes
+IPV6_DEFROUTE=yes
+IPV6_PEERDNS=yes
+IPV6_PEERROUTES=yes
+IPV6_FAILURE_FATAL=no
+NAME=eno16780032
+UUID=28f5f63d-3d65-4ffa-934a-bbb63e27d884
+ONBOOT=no
+
+
+for manual settings 
+
+BOOTPROTO=none
+ONBOOT=yes
+PREFIX=24
+IPADDR=10.0.0.0.17
+
+
+after configuration 
+nmcli c reload
+
+network manager  nmtui
+
+nmcli con show 
+
+nmcli general status
+
+nmcli con edit
+
+
+
+-----------------------------Network LISTEN---------------------
+
+ss -tulpn | grep mysqld
+
+
+
+---------------Grub file------------
+
+vi /boot/grub2/grub.cfg
+
+grub- and tab 
+
+---------------Grub file------------
+
+
+
+-----------------------------------Kernel file----------------------
+
+
+yum list installed kernel-*           ---kernel version
+
+
+uname -r
+
+vmlinuz is kernel file
+
+
+
+-----------------------------------Kernel file----------------------
+
+
+
+-----------------------------  SYSTEMD---------------------
+
+[root@localhost boot]# systemctl list-unit-files at service
+
+systemctl list-unit-files -at service
+
+-----------------------------  SYSTEMD---------------------
+
+
+

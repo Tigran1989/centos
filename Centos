@@ -82,5 +82,11 @@ systemctl list-unit-files -at service
 
 -----------------------------  SYSTEMD---------------------
 
+-----------------------------  MariaDB config file---------------------
+ cat /etc/my.cnf
+ vi /etc/my.cnf.d/server.cnf
+ bind-address=10.39.2.89 # whcih interface will listen MariaDB
+ skip-networking=1 # disable listen any port
 
+ 
 

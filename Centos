@@ -90,4 +90,6 @@ systemctl list-unit-files -at service
  skip-networking=1 # disable listen any port
 
  
+------------------------------------show public ip address of instance----------------------------
 
+dig +short myip.opendns.com @resolver1.opendns.com
